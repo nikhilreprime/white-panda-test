@@ -25,7 +25,7 @@ app.get('*', (req, res) => {
   // desktop, tv, tablet, phone, bot or car
   let deviceType = req.device.type.toUpperCase()
   if(deviceType == "PHONE"){
-    res.send('<div> Coming soon </div>')
+    res.sendFile(path.resolve(__dirname, '..', 'public/mobile', 'index.html'));
   }else{
     res.sendFile(path.resolve(__dirname, '..', 'public/desktop', 'index.html'));
   }

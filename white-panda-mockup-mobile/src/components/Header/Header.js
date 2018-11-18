@@ -40,7 +40,7 @@ class Header extends Component {
           <div className="section-1">
             <img src="/images/logo.jpg"/>
           </div>
-          <div className="section-2"> 
+          {/* <div className="section-2"> 
             <div className="item">
             </div>
             <div className="item">
@@ -49,7 +49,7 @@ class Header extends Component {
             </div>
             <div className="item">
             </div>
-          </div>
+          </div> */}
           
       </div>
     );
