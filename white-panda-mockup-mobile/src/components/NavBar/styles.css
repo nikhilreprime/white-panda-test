@@ -15,6 +15,10 @@
   width: 40px;
   height: calc(100% - 40px);
 }
+.route-icon{
+  width: 25px;
+  height: 40px;
+}
 
 .item-menu-v{
   height: 40px;

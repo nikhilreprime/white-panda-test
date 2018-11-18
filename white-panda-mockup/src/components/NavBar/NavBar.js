@@ -19,16 +19,19 @@ class NavBar extends Component {
       {
         id: 1,
         title: "H",
+        iconUrl: "/images/home.svg",
         isActive: true
       },
       {
         id: 2,
         title: "C",
+        iconUrl: "/images/note.svg",
         isActive: false
       },
       {
         id: 1,
         title: "P",
+        iconUrl: "/images/save.svg",
         isActive: false
       }
     ]
@@ -53,33 +56,38 @@ class NavBar extends Component {
   //finally render
   render() {
     let { orientation } = this.props;
-    
+
     let classes = "nav-bar-container"
-    if(orientation === "horizantal"){
+    if (orientation === "horizantal") {
       classes += " nav-horizantal"
-    }else{
+    } else {
       classes += " nav-vertical"
     };
 
-    let menuView = this.menuItems.map((item, index)=>{
+    let menuView = this.menuItems.map((item, index) => {
       let classes = "";
-      if(item.isActive){
+      if (item.isActive) {
         classes = "active"
       }
-      if(orientation === "horizantal"){
+      if (orientation === "horizantal") {
         classes += " item-menu-h"
-      }else{
+      } else {
         classes += " item-menu-v"
       };
-      return(
+      return (
         <div className={classes}>
-            {item.title}
+          {/* {item.title} */}
+          <img
+            className="route-icon"
+            src={item.iconUrl}
+            alt="route"
+          />
         </div>
       )
     })
     return (
       <div className={classes}>
-          {menuView}
+        {menuView}
       </div>
     );
   }
