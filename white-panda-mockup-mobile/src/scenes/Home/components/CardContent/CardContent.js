@@ -32,37 +32,35 @@ class CardContent extends Component {
 
   //finally render
   render() {
-    let { id, iconUrl, title, description, cardType} = this.props;
-    if(cardType === 1){
+    let { id, iconUrl, title, description, cardType } = this.props;
+    if (cardType === 1) {
 
-    }else if(cardType === 2){
+    } else if (cardType === 2) {
 
     }
-    
+
     return (
       <div className="card-container">
-
-          <div className="section-1">
-            <div className="logo">
-              
-            </div>
-            <div className="title">
-              {title}
-            </div>
-            <div className="description">
-              {description}
-            </div>
+        <div className="logo">
+        </div>
+        <div className="section-1">
+          <div className="title">
+            {title}
           </div>
-          <BtnSolid 
-            onClick = {()=>{ window.alert("order Item "+id)}} 
-            title="Order"
-            customStyle = {
-              {
-                width : "50px"
-                
-              }
+          <div className="description">
+            {description}
+          </div>
+        </div>
+        <BtnSolid
+          onClick={() => { window.alert("order Item " + id) }}
+          title="Order"
+          customStyle={
+            {
+              width: "50px"
+
             }
-            />
+          }
+        />
       </div>
     );
   }
@@ -76,7 +74,7 @@ CardContent.propTypes = {
   id: PropTypes.number,
   iconUrl: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.string, 
+  description: PropTypes.string,
   cardType: PropTypes.number
 };
 
